@@ -4,6 +4,18 @@ All notable changes to this package are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-11-13
+
+### Added
+
+- Published source and releases at <https://github.com/rorygpk/dsh-terminal-mode>.
+- README install guide gained a GitHub clone path; tag pushes build the portable
+  archive on GitHub Actions and attach it to the release.
+
+### Changed
+
+- Documentation version references follow the package version.
+
 ## [1.0.0] - 2026-11-13
 
 ### Added

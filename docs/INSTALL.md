@@ -23,18 +23,18 @@ run `install_bundle` again with the new path.
 
 ### From a release archive
 
-1. Download `dsh-terminal-mode-1.0.0.zip`.
+1. Download `dsh-terminal-mode-1.0.1.zip`.
 2. Extract it. The archive contains a top-level `dsh-terminal-mode/` folder.
 3. Confirm `dsh-terminal-mode\package.json` exists at the folder root.
 
 Optionally verify the checksum against the value published with the release:
 
 ```powershell
-Get-FileHash .\dsh-terminal-mode-1.0.0.zip -Algorithm SHA256
+Get-FileHash .\dsh-terminal-mode-1.0.1.zip -Algorithm SHA256
 ```
 
 ```bash
-shasum -a 256 dsh-terminal-mode-1.0.0.zip
+shasum -a 256 dsh-terminal-mode-1.0.1.zip
 ```
 
 ### From a source folder or network share
@@ -125,7 +125,7 @@ To uninstall:
    `localStorage` key for the origin.
 
 To roll back, replace the folder with the previous release and run
-`install_bundle` again. No migration step is required for 1.0.0.
+`install_bundle` again. No migration step is required for 1.0.1.
 
 ## 8. Build the archive on a development machine
 

@@ -1,6 +1,6 @@
 {
   "name": "@local/dsh-terminal-mode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Terminal-mode skins, CRT effects, command palette and keyboard shortcuts for the DeepSeek Harness Web GUI. Every feature is reversible to the untouched default skin.",
   "private": true,
   "type": "module",

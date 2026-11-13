@@ -39,7 +39,7 @@ absolute path, never from npm, and needs no network access.
 
 ### A. Release archive (another machine)
 
-1. Extract `dsh-terminal-mode-1.0.0.zip` to a permanent folder such as `C:\Tools\dsh-terminal-mode`.
+1. Extract `dsh-terminal-mode-1.0.1.zip` to a permanent folder such as `C:\Tools\dsh-terminal-mode`.
 2. In a DeepSeek Harness session, install it by absolute path:
 
 ```text
@@ -71,8 +71,18 @@ Windows PowerShell 5.1+ or PowerShell 7+, no Node.js:
 powershell -ExecutionPolicy Bypass -File scripts\pack.ps1
 ```
 
-Produces `dist/dsh-terminal-mode-1.0.0.zip` and prints its SHA-256. Missing runtime
+Produces `dist/dsh-terminal-mode-1.0.1.zip` and prints its SHA-256. Missing runtime
 files abort the build; missing optional docs only warn. Install it as in A.
+
+### D. From GitHub
+
+```bash
+git clone https://github.com/rorygpk/dsh-terminal-mode
+```
+
+Install the cloned folder by absolute path exactly as in B. Prebuilt archives are on the
+[Releases](https://github.com/rorygpk/dsh-terminal-mode/releases) page: pushing a `v*` tag
+builds the zip on GitHub Actions and attaches it to the release.
 
 ## Use
 
@@ -112,7 +122,7 @@ Windows and Linux, Cmd on macOS.
 | Mod+Alt+0 | Restore the default skin |
 | Mod+Alt+B | Brightness +5% |
 | Mod+Alt+Shift+B | Brightness -5% |
-| Alt+1 … Alt+8 | Skin by index: 1 Default, 2 Codex Terminal, 3 Phosphor Green, 4 Amber CRT, 5 Tokyo Night, 6 Nord, 7 Solarized Light, 8 Paper |
+| Alt+1 鈥?Alt+8 | Skin by index: 1 Default, 2 Codex Terminal, 3 Phosphor Green, 4 Amber CRT, 5 Tokyo Night, 6 Nord, 7 Solarized Light, 8 Paper |
 
 The backquote-key fallback (same modifiers plus the backquote key) also restores the
 default skin. If a browser or OS reserves a shortcut, the sidebar footer button always
@@ -123,7 +133,7 @@ opens the palette.
 Every non-default skin docks a statusline under the composer, for example:
 
 ```text
-> Codex Terminal · 100% · 22:59:00                     Ctrl+Alt+K palette
+> Codex Terminal 路 100% 路 22:59:00                     Ctrl+Alt+K palette
 ```
 
 Left: prompt mark, active skin, brightness, live clock, blinking cursor. Right: the
@@ -157,10 +167,11 @@ The package is plain files: copy the folder to any machine and install it with
 replace the files with a new version, rerun `install_bundle` and refresh the Harness
 window once so the new client bundle is loaded.
 
-To publish a release: push the folder contents to a repository and tag it (for example
-`v1.0.0`); run `scripts/pack.ps1` and attach `dist/dsh-terminal-mode-1.0.0.zip` to the
-release (`dist/` and `*.zip` are gitignored); bump `version` in `package.json` before
-the next release and the archive name follows automatically.
+Published at <https://github.com/rorygpk/dsh-terminal-mode> (MIT). The repository keeps
+the source, the install guides, the headless self-test and a release workflow: pushing a
+`v*` tag builds `dist/dsh-terminal-mode-<version>.zip` on GitHub Actions and attaches it
+to the release, so the published archive is reproducible from source with
+`scripts/pack.ps1`.
 
 `private` is `true`: npm will not publish the package, and folder or archive
 distribution is intentional.

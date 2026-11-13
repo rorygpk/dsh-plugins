@@ -35,7 +35,7 @@ docs/media/terminal-mode-settings.png
 
 ### 方式一：使用发布压缩包（另一台机器）
 
-1. 解压 `dsh-terminal-mode-1.0.0.zip` 到固定位置，例如 `C:\Tools\dsh-terminal-mode`。
+1. 解压 `dsh-terminal-mode-1.0.1.zip` 到固定位置，例如 `C:\Tools\dsh-terminal-mode`。
 2. 在 DeepSeek Harness 会话中按绝对路径安装：
 
 ```text
@@ -62,7 +62,17 @@ plugin_manager install_bundle({ target: "C:/Users/me/src/dsh-terminal-mode" })
 powershell -ExecutionPolicy Bypass -File scripts\pack.ps1
 ```
 
-生成 `dist/dsh-terminal-mode-1.0.0.zip` 并打印 SHA-256。缺少运行时文件会中止构建；缺少可选文档只给出警告。生成后按方式一安装。
+生成 `dist/dsh-terminal-mode-1.0.1.zip` 并打印 SHA-256。缺少运行时文件会中止构建；缺少可选文档只给出警告。生成后按方式一安装。
+
+### 方式四：从 GitHub 获取
+
+```bash
+git clone https://github.com/rorygpk/dsh-terminal-mode
+```
+
+按方式二用克隆目录的绝对路径安装即可。预构建的压缩包在
+[Releases](https://github.com/rorygpk/dsh-terminal-mode/releases) 页面：推送 `v*` 标签后由
+GitHub Actions 自动构建 zip 并附加到 Release。
 
 ## 使用
 
@@ -143,11 +153,7 @@ powershell -ExecutionPolicy Bypass -File scripts\pack.ps1
 
 本包只是一组文件：把文件夹复制到任意机器，用 `install_bundle` 安装即可；目标机器上不需要构建、安装或下载任何东西。运行时文件为 `package.json`、`cordis.patch.yml`、`index.js`、`client.js`、`locale/en.json`、`locale/zh.json`、`icon.svg`。用新版本替换文件后，请重新执行 `install_bundle` 并刷新一次 Harness 窗口，以加载新的客户端 bundle。
 
-发布流程：
-
-1. 把本文件夹内容推送到仓库并打标签，例如 `v1.0.0`。
-2. 运行 `scripts/pack.ps1`，把 `dist/dsh-terminal-mode-1.0.0.zip` 附加到 Release。`dist/` 与 `*.zip` 已加入 gitignore，仓库只提交源码。
-3. 下次发布前更新 `package.json` 中的 `version`，压缩包名会自动跟随。
+源码发布在 <https://github.com/rorygpk/dsh-terminal-mode>（MIT）。仓库包含源码、安装文档、无头自测与发布工作流：推送 `v*` 标签会由 GitHub Actions 构建 `dist/dsh-terminal-mode-<version>.zip` 并附加到 Release，因此发布包可用 `scripts/pack.ps1` 从源码复现。
 
 由于 `private` 为 `true`，npm 不会发布该包。通过文件夹或压缩包分发是刻意设计。
 
