@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="title">
+  <title id="title">Terminal mode</title>
+  <rect x="2" y="2" width="60" height="60" rx="13" fill="#0b0e0c"/>
+  <path d="M17 20 L31 32 L17 44" fill="none" stroke="#3fb950" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="37" y="38" width="12" height="7" rx="1.5" fill="#3fb950"/>
+</svg>

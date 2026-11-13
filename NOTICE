@@ -1,0 +1,20 @@
+dsh-terminal-mode
+Copyright (c) 2026 dsh-terminal-mode contributors
+Licensed under the MIT License. See LICENSE.
+
+Third-party palette inspiration
+-------------------------------
+
+Several skin names refer to well-known public color schemes. Those schemes are
+used only as an aesthetic reference. No palette files, code, fonts, or other
+assets are copied from these projects; the color values in this package were
+selected independently for this plugin.
+
+- Nord: Arctic Ice Studio and Sven Greb, https://www.nordtheme.com, MIT License.
+- Tokyo Night: enkia, https://github.com/enkia/tokyo-night-vscode-theme, MIT License.
+- Solarized: Ethan Schoonover, https://ethanschoonover.com/solarized, MIT License.
+- Codex Terminal: an original interpretation of a classic command-line look.
+  This package is not affiliated with, endorsed by, or sponsored by OpenAI.
+
+All other code and assets in this package are original work by the
+dsh-terminal-mode contributors.

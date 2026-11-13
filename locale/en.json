@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Terminal mode",
+    "description": "Restyles the Web GUI as a keyboard-driven terminal (Codex-style skins, CRT effects, command palette, statusline) and restores the default skin at any time."
+  }
+}
