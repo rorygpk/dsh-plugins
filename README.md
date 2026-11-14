@@ -23,6 +23,10 @@ runtime dependency, nothing to run alongside the app.**
 > Installation is directory-based. Point `install_bundle` at the plugin folder,
 > then refresh the Harness window once.
 
+Rendered preview: [rorygpk.github.io/dsh-plugins](https://rorygpk.github.io/dsh-plugins/).
+The generated page is committed as [`docs/index.html`](docs/index.html), so the
+documentation also opens offline.
+
 ## Plugins
 
 | Plugin | Purpose | Kind | Version | Documentation |

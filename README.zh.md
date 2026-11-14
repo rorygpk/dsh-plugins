@@ -22,6 +22,9 @@
 > [!NOTE]
 > 安装以目录为单位。把 `install_bundle` 指向插件目录，然后刷新一次 Harness 窗口。
 
+网页预览：[rorygpk.github.io/dsh-plugins](https://rorygpk.github.io/dsh-plugins/)。
+生成的页面已提交为 [`docs/index.html`](docs/index.html)，因此文档也可以离线打开。
+
 ## 插件
 
 | 插件 | 用途 | 类型 | 版本 | 文档 |

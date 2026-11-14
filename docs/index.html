@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dsh-plugins - README preview (offline)</title>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #0d1117; color: #c9d1d9; font: 16px/1.6 -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; }
+.wrap { max-width: 900px; margin: 0 auto; padding: 32px 24px 96px; }
+.tabs { position: sticky; top: 0; z-index: 5; display: flex; gap: 8px; padding: 12px 0; background: #0d1117; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+.tab { border: 1px solid #30363d; background: #161b22; color: #c9d1d9; padding: 6px 16px; border-radius: 6px; cursor: pointer; font: inherit; }
+.tab[aria-selected="true"] { border-color: #7ee787; color: #7ee787; }
+.panel[hidden] { display: none; }
+h1, h2, h3, h4 { color: #e6edf3; line-height: 1.3; margin: 28px 0 12px; }
+h1 { font-size: 2em; border-bottom: 1px solid #21262d; padding-bottom: .3em; }
+h2 { font-size: 1.5em; border-bottom: 1px solid #21262d; padding-bottom: .3em; }
+a { color: #58a6ff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { background: rgba(110,118,129,.25); padding: .15em .35em; border-radius: 4px; font: 85% "Cascadia Code", Consolas, monospace; }
+pre.code { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 14px 16px; overflow: auto; }
+pre.code code { background: none; padding: 0; font-size: 13px; }
+table { border-collapse: collapse; width: 100%; margin: 16px 0; display: block; overflow: auto; }
+th, td { border: 1px solid #30363d; padding: 8px 12px; text-align: left; vertical-align: middle; }
+th { background: #161b22; color: #e6edf3; }
+tr:nth-child(even) td { background: #0f141a; }
+.pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.pill.split { padding: 0; overflow: hidden; display: inline-flex; }
+.pill-label { background: #30363d; color: #c9d1d9; padding: 2px 8px; }
+.pill-msg { background: var(--pill); color: inherit; padding: 2px 8px; }
+.callout { border-left: 4px solid #58a6ff; background: rgba(56,139,253,.1); padding: 12px 16px; margin: 16px 0; border-radius: 6px; }
+.callout.tip { border-color: #3fb950; background: rgba(63,185,80,.1); }
+.callout.warning { border-color: #d29922; background: rgba(210,153,34,.1); }
+.callout-title { font-weight: 700; color: #e6edf3; margin-bottom: 4px; }
+blockquote { border-left: 4px solid #30363d; margin: 16px 0; padding: 0 16px; color: #8b949e; }
+kbd { display: inline-block; border: 1px solid #30363d; border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; font-size: 12px; font-family: inherit; background: #161b22; }
+img { max-width: 100%; vertical-align: middle; }
+hr { border: 0; border-top: 1px solid #21262d; margin: 28px 0; }
+ul, ol { padding-left: 1.6em; }
+.foot { margin-top: 40px; color: #8b949e; font-size: 13px; border-top: 1px solid #21262d; padding-top: 16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="tabs">
+    <button class="tab" id="tab-en" aria-selected="true" onclick="show('en')">English</button>
+    <button class="tab" id="tab-zh" aria-selected="false" onclick="show('zh')">简体中文</button>
+  </div>
+  <div class="panel" id="panel-en"><div align="center">
+<h1>dsh-plugins</h1>
+<p><strong>Plugins for DeepSeek Harness. Each one is a plain directory: no build step, no runtime dependency, nothing to run alongside the app.</strong></p>
+<p>
+<a href="https://github.com/rorygpk/dsh-plugins/releases/latest"><img alt="release" src="https://img.shields.io/github/v/release/rorygpk/dsh-plugins?color=7ee787&label=release&style=for-the-badge"></a>
+<a href="LICENSE"><img alt="license" src="https://img.shields.io/github/license/rorygpk/dsh-plugins?color=88c0d0&style=for-the-badge"></a>
+<img alt="plugins" src="https://img.shields.io/badge/plugins-2-7aa2f7?style=for-the-badge">
+<img alt="build" src="https://img.shields.io/badge/build-none-ebcb8b?style=for-the-badge">
+<img alt="dsh" src="https://img.shields.io/badge/dsh-0.2.2--rc.1-bf616a?style=for-the-badge">
+</p>
+<p><strong>English</strong> | <a href="README.zh.md">简体中文</a></p>
+</div>
+<hr>
+<div class="callout note"><div class="callout-title">Note</div><div>Installation is directory-based. Point <code>install_bundle</code> at the plugin folder, then refresh the Harness window once.</div></div>
+<p>Rendered preview: <a href="https://rorygpk.github.io/dsh-plugins/">rorygpk.github.io/dsh-plugins</a>. The generated page is committed as <a href="docs/index.html"><code>docs/index.html</code></a>, so the documentation also opens offline.</p>
+<h2>Plugins</h2>
+<table><thead><tr><th>Plugin</th><th>Purpose</th><th>Kind</th><th>Version</th><th>Documentation</th></tr></thead><tbody><tr><td><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgogIDx0aXRsZSBpZD0idGl0bGUiPlRlcm1pbmFsIG1vZGU8L3RpdGxlPgogIDxyZWN0IHg9IjIiIHk9IjIiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcng9IjEzIiBmaWxsPSIjMGIwZTBjIi8+CiAgPHBhdGggZD0iTTE3IDIwIEwzMSAzMiBMMTcgNDQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzNmYjk1MCIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8cmVjdCB4PSIzNyIgeT0iMzgiIHdpZHRoPSIxMiIgaGVpZ2h0PSI3IiByeD0iMS41IiBmaWxsPSIjM2ZiOTUwIi8+Cjwvc3ZnPgo=" alt="" width="26" height="26"> <strong><a href="plugins/dsh-terminal-mode/README.md">dsh-terminal-mode</a></strong></td><td>A terminal appearance for the Web GUI: eight palettes, CRT effects, a command palette and a statusline. Presentation only, and fully reversible.</td><td><span class="pill split" style="--pill: #7ee787; color:#101418"><span class="pill-label">web-ui</span><span class="pill-msg">skin</span></span></td><td><code>1.0.2</code></td><td><a href="plugins/dsh-terminal-mode/README.md">English</a> · <a href="plugins/dsh-terminal-mode/README.zh.md">中文</a></td></tr><tr><td><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3QgeD0iNCIgeT0iNCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iMTQiIGZpbGw9IiMyNDdiYmYiLz4KICA8cGF0aCBkPSJNMzQgMTIgMjAgMzZoMTBsLTQgMTYgMTYtMjZIMzJ6IiBmaWxsPSIjZmZmZmZmIi8+Cjwvc3ZnPgo=" alt="" width="26" height="26"> <strong><a href="plugins/dsh-quick-provider/README.md">dsh-quick-provider</a></strong></td><td>Adds an OpenAI-compatible model provider from four fields and registers every model the endpoint publishes.</td><td><span class="pill split" style="--pill: #7aa2f7; color:#101418"><span class="pill-label">host</span><span class="pill-msg">+ web-ui provider</span></span></td><td><code>1.0.0</code></td><td><a href="plugins/dsh-quick-provider/README.md">English</a> · <a href="plugins/dsh-quick-provider/README.zh.md">中文</a></td></tr></tbody></table>
+<h2>dsh-terminal-mode</h2>
+<p>A skin for the Harness Web GUI. It changes appearance and nothing else: colour, type, spacing, effects. Every control can be undone, and *Restore default skin* returns the interface to its original state.</p>
+<ul><li>Eight palettes: Default, Codex Terminal, Phosphor Green, Amber CRT, Tokyo</li></ul>
+<p>Night, Nord, Solarized Light, Paper.</p>
+<ul><li>Adjustable brightness, background temperature, accent colour, corner radius,</li></ul>
+<p>scanline intensity, text glow, and a monospace toggle.</p>
+<ul><li>A command palette (<code>Ctrl/Cmd+Alt+K</code>), shortcuts for switching and restoring,</li></ul>
+<p>a statusline under the composer, and a <code>&gt;_</code> mark for empty sessions.</p>
+<ul><li>Appearance is stored in the browser's <code>localStorage</code>. The Harness profile is</li></ul>
+<p>left untouched.</p>
+<p>The implementation maps CSS custom properties on <code>&lt;html data-dsk&gt;</code> onto the application's <code>--dsw-alias-*</code> design tokens. New interface elements are rendered through published slots, so no component is replaced.</p>
+<pre class="code"><code>plugin_manager install_bundle({ target: &quot;&lt;repo&gt;/plugins/dsh-terminal-mode&quot; })</code></pre>
+<h2>dsh-quick-provider</h2>
+<p>Adds an OpenAI-compatible provider with four fields: provider id, display name, base URL and API key.</p>
+<ul><li>Queries <code>GET /models</code> and registers every model the endpoint advertises.</li><li>Stores the key through the credential seam. The provider configuration holds</li></ul>
+<p>only an environment-variable reference.</p>
+<ul><li>Available as a form under <strong>Settings > Models</strong> and as the <code>add_llm_provider</code></li></ul>
+<p>tool for sessions.</p>
+<p><code>index.js</code> performs discovery, stores the credential and writes the provider into the <code>llm-pi-ai</code> settings namespace, leaving streaming, retries and catalog resolution to the existing adapter. <code>client.js</code> renders the form.</p>
+<pre class="code"><code>plugin_manager install_bundle({ target: &quot;&lt;repo&gt;/plugins/dsh-quick-provider&quot; })</code></pre>
+<h2>Install in your DSH</h2>
+<p>DeepSeek Harness is the agent runtime these plugins extend. If it is not installed yet, install it first. Then:</p>
+<ol><li>Clone the repository.</li></ol>
+<pre class="code"><code>   git clone https://github.com/rorygpk/dsh-plugins</code></pre>
+<ol><li>In a DSH session, install the plugin directory.</li></ol>
+<pre class="code"><code>   plugin_manager install_bundle({ target: &quot;&lt;repo&gt;/plugins/dsh-terminal-mode&quot; })
+   plugin_manager install_bundle({ target: &quot;&lt;repo&gt;/plugins/dsh-quick-provider&quot; })</code></pre>
+<ol><li>Refresh the Harness window once so the client bundle loads.</li></ol>
+<table><thead><tr><th>Location</th><th>What appears</th></tr></thead><tbody><tr><td>Settings > Terminal mode</td><td>Skin cards, brightness, scanlines, palette shortcut</td></tr><tr><td>Settings > Models (lower section)</td><td>Quick provider form</td></tr><tr><td>Sidebar <code>&gt;_</code> button, or <kbd>Mod</kbd>+<kbd>Alt</kbd>+<kbd>K</kbd></td><td>Command palette</td></tr></tbody></table>
+<p>To uninstall, remove the bundle in the plugin manager, refresh the page and delete the directory. Terminal-mode preferences stay in the browser; provider entries stay in the profile until removed there.</p>
+<p>Release archives are attached to each release as well. Extract one to a permanent location and point <code>install_bundle</code> at the extracted folder.</p>
+<h2>Compatibility</h2>
+<p>Built and tested against DeepSeek Harness <strong>0.2.2-rc.1</strong> (Web profile). A plugin is a directory whose <code>package.json</code> declares:</p>
+<ul><li><code>dsh.bundle.patch</code>, the Cordis patch that inserts the plugin row;</li><li><code>dsh.client</code>, the optional browser half loaded by the Web module loader;</li><li><code>locale/&lt;lang&gt;.json</code>, the title and description shown by the plugin manager;</li><li><code>icon.svg</code>, the artwork shown in the app.</li></ul>
+<h2>Repository layout</h2>
+<pre class="code"><code>plugins/
+├── dsh-terminal-mode/     Web UI skin plugin (browser only)
+│   ├── package.json       bundle manifest
+│   ├── client.js          skin engine, settings page, palette, statusline
+│   ├── docs/              install guide (EN + ZH)
+│   ├── scripts/pack.ps1   portable zip builder
+│   └── test/selftest.mjs  headless checks
+└── dsh-quick-provider/    provider plugin (host + browser)
+    ├── package.json
+    ├── index.js           model discovery, credential storage, HTTP route
+    └── client.js          settings form
+scripts/pack-all.ps1       build every plugin archive
+scripts/check-links.mjs    documentation check used by CI
+.github/workflows/         CI verification and tag-driven release</code></pre>
+<h2>Adding a plugin</h2>
+<p>Each plugin directory is self-contained, and CI and the release workflow discover it automatically:</p>
+<ol><li>Create <code>plugins/&lt;name&gt;/</code> with <code>package.json</code>, <code>cordis.patch.yml</code>, <code>index.js</code></li></ol>
+<p>(an inert <code>apply()</code> is enough), an optional <code>client.js</code>, <code>locale/en.json</code>, <code>locale/zh.json</code> and an <code>icon.svg</code>.</p>
+<ol><li>Add a <code>scripts/pack.ps1</code>, copied from <code>dsh-terminal-mode</code>.</li><li>Add <code>README.md</code>, <code>README.zh.md</code>, and a row to the table above.</li><li>Run <code>powershell -ExecutionPolicy Bypass -File scripts\pack-all.ps1</code> before</li></ol>
+<p>tagging.</p>
+<h2>Direction</h2>
+<p>Two plugins exist today. What comes next will be decided the same way: by what is missing in daily use.</p>
+<ul><li>Further plugins under consideration: session export, workspace diff review, a</li></ul>
+<p>prompt library, per-session model presets.</p>
+<ul><li>A plugin index listing compatible builds for each DSH release.</li><li>A starter template, so a new plugin begins from a working bundle.</li><li>Additional interface languages.</li><li>CI coverage against the DSH release line each plugin declares.</li></ul>
+<p>Issues and pull requests are welcome. The standard is modest and stays fixed: a plugin should be worth installing.</p>
+<h2>Releases</h2>
+<p>Pushing a <code>v*</code> tag builds every plugin archive on GitHub Actions and attaches each zip to that tag's release. Local builds are reproducible with <code>scripts/pack-all.ps1</code>.</p>
+<h2>License</h2>
+<p>MIT. See <a href="LICENSE">LICENSE</a>. Palette inspiration is credited in the respective plugin <code>NOTICE</code> files. No harness code is copied or modified.</p>
+<hr>
+<div align="center">
+<p><strong><a href="README.md">English</a></strong> | <a href="README.zh.md">简体中文</a> · <a href="https://github.com/rorygpk/dsh-plugins/releases">Releases</a></p>
+</div></div>
+  <div class="panel" id="panel-zh" hidden><div align="center">
+<h1>dsh-plugins</h1>
+<p><strong>为 DeepSeek Harness 编写的插件。每个插件都是一个普通目录：无需构建、没有运行时依赖， 也不需要在应用之外运行任何东西。</strong></p>
+<p>
+<a href="https://github.com/rorygpk/dsh-plugins/releases/latest"><img alt="release" src="https://img.shields.io/github/v/release/rorygpk/dsh-plugins?color=7ee787&label=release&style=for-the-badge"></a>
+<a href="LICENSE"><img alt="license" src="https://img.shields.io/github/license/rorygpk/dsh-plugins?color=88c0d0&style=for-the-badge"></a>
+<img alt="plugins" src="https://img.shields.io/badge/plugins-2-7aa2f7?style=for-the-badge">
+<img alt="build" src="https://img.shields.io/badge/build-none-ebcb8b?style=for-the-badge">
+<img alt="dsh" src="https://img.shields.io/badge/dsh-0.2.2--rc.1-bf616a?style=for-the-badge">
+</p>
+<p><a href="README.md">English</a> | <strong>简体中文</strong></p>
+</div>
+<hr>
+<div class="callout note"><div class="callout-title">注意</div><div>安装以目录为单位。把 <code>install_bundle</code> 指向插件目录，然后刷新一次 Harness 窗口。</div></div>
+<p>网页预览：<a href="https://rorygpk.github.io/dsh-plugins/">rorygpk.github.io/dsh-plugins</a>。 生成的页面已提交为 <a href="docs/index.html"><code>docs/index.html</code></a>，因此文档也可以离线打开。</p>
+<h2>插件</h2>
+<table><thead><tr><th>插件</th><th>用途</th><th>类型</th><th>版本</th><th>文档</th></tr></thead><tbody><tr><td><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgogIDx0aXRsZSBpZD0idGl0bGUiPlRlcm1pbmFsIG1vZGU8L3RpdGxlPgogIDxyZWN0IHg9IjIiIHk9IjIiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcng9IjEzIiBmaWxsPSIjMGIwZTBjIi8+CiAgPHBhdGggZD0iTTE3IDIwIEwzMSAzMiBMMTcgNDQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzNmYjk1MCIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8cmVjdCB4PSIzNyIgeT0iMzgiIHdpZHRoPSIxMiIgaGVpZ2h0PSI3IiByeD0iMS41IiBmaWxsPSIjM2ZiOTUwIi8+Cjwvc3ZnPgo=" alt="" width="26" height="26"> <strong><a href="plugins/dsh-terminal-mode/README.zh.md">dsh-terminal-mode</a></strong></td><td>网页界面的终端外观：八套配色、CRT 特效、命令面板与状态栏。只改变外观，且完全可回退。</td><td><span class="pill split" style="--pill: #7ee787; color:#101418"><span class="pill-label">web-ui</span><span class="pill-msg">skin</span></span></td><td><code>1.0.2</code></td><td><a href="plugins/dsh-terminal-mode/README.zh.md">中文</a> · <a href="plugins/dsh-terminal-mode/README.md">English</a></td></tr><tr><td><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3QgeD0iNCIgeT0iNCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iMTQiIGZpbGw9IiMyNDdiYmYiLz4KICA8cGF0aCBkPSJNMzQgMTIgMjAgMzZoMTBsLTQgMTYgMTYtMjZIMzJ6IiBmaWxsPSIjZmZmZmZmIi8+Cjwvc3ZnPgo=" alt="" width="26" height="26"> <strong><a href="plugins/dsh-quick-provider/README.zh.md">dsh-quick-provider</a></strong></td><td>用四项输入添加一个 OpenAI 兼容模型提供商，并注册该端点声明的全部模型。</td><td><span class="pill split" style="--pill: #7aa2f7; color:#101418"><span class="pill-label">host</span><span class="pill-msg">+ web-ui provider</span></span></td><td><code>1.0.0</code></td><td><a href="plugins/dsh-quick-provider/README.zh.md">中文</a> · <a href="plugins/dsh-quick-provider/README.md">English</a></td></tr></tbody></table>
+<h2>dsh-terminal-mode</h2>
+<p>Harness 网页界面的皮肤。它只改变外观：配色、字体、间距与特效。所有设置都可以撤销， “还原默认皮肤”会把界面恢复到初始状态。</p>
+<ul><li>八套配色：默认、Codex 终端、磷光绿、琥珀 CRT、东京夜色、北境、Solarized 浅色、纸白。</li><li>可调亮度、背景色温、强调色、圆角、扫描线强度、文字辉光，以及等宽字体开关。</li><li>命令面板（<code>Ctrl/Cmd+Alt+K</code>）、切换与还原快捷键、输入框下方状态栏，以及空会话的 <code>&gt;_</code> 标记。</li><li>外观保存在浏览器的 <code>localStorage</code> 中，不写入 Harness profile。</li></ul>
+<p>实现方式是把 <code>&lt;html data-dsk&gt;</code> 上的 CSS 自定义属性映射到应用的 <code>--dsw-alias-*</code> 设计令牌； 新增界面全部通过公开插槽渲染，不替换任何组件。</p>
+<pre class="code"><code>plugin_manager install_bundle({ target: &quot;&lt;仓库路径&gt;/plugins/dsh-terminal-mode&quot; })</code></pre>
+<h2>dsh-quick-provider</h2>
+<p>用四项输入添加一个 OpenAI 兼容提供商：提供商 ID、显示名称、API 地址、API Key。</p>
+<ul><li>请求 <code>GET /models</code>，注册该端点声明的每个模型。</li><li>通过凭据通道保存密钥；提供商配置里只保留环境变量引用。</li><li>既可以在 <strong>设置 > 模型</strong> 的表单中操作，也可以由会话调用 <code>add_llm_provider</code> 工具完成。</li></ul>
+<p><code>index.js</code> 负责模型发现、保存凭据，并把提供商写入 <code>llm-pi-ai</code> 设置命名空间，流式、重试与 目录解析仍由既有适配器承担；<code>client.js</code> 只渲染表单。</p>
+<pre class="code"><code>plugin_manager install_bundle({ target: &quot;&lt;仓库路径&gt;/plugins/dsh-quick-provider&quot; })</code></pre>
+<h2>安装到你的 DSH</h2>
+<p>DeepSeek Harness 是这些插件所扩展的 Agent 运行时。如果尚未安装，请先安装，然后：</p>
+<ol><li>克隆仓库。</li></ol>
+<pre class="code"><code>   git clone https://github.com/rorygpk/dsh-plugins</code></pre>
+<ol><li>在 DSH 会话中安装插件目录。</li></ol>
+<pre class="code"><code>   plugin_manager install_bundle({ target: &quot;&lt;仓库路径&gt;/plugins/dsh-terminal-mode&quot; })
+   plugin_manager install_bundle({ target: &quot;&lt;仓库路径&gt;/plugins/dsh-quick-provider&quot; })</code></pre>
+<ol><li>刷新一次 Harness 窗口，让客户端 bundle 生效。</li></ol>
+<table><thead><tr><th>位置</th><th>内容</th></tr></thead><tbody><tr><td>设置 > 终端模式</td><td>皮肤卡片、亮度、扫描线、命令面板快捷键</td></tr><tr><td>设置 > 模型（页面上部下方）</td><td>快速添加提供商表单</td></tr><tr><td>侧边栏 <code>&gt;_</code> 按钮，或 <kbd>Mod</kbd>+<kbd>Alt</kbd>+<kbd>K</kbd></td><td>命令面板</td></tr></tbody></table>
+<p>卸载时，在插件管理器中移除 bundle，刷新页面并删除目录。终端模式的外观偏好仍留在浏览器中； 提供商条目会保留在 profile 里，直到手动移除。</p>
+<p>每个插件也会以独立 zip 附在对应的 Release 上。解压到固定位置后，把 <code>install_bundle</code> 指向解压目录即可。</p>
+<h2>兼容性</h2>
+<p>基于 DeepSeek Harness <strong>0.2.2-rc.1</strong>（Web profile）构建并测试。插件是一个目录，其 <code>package.json</code> 声明：</p>
+<ul><li><code>dsh.bundle.patch</code>：插入插件行的 Cordis 补丁；</li><li><code>dsh.client</code>：可选的浏览器半部，由 Web 模块加载器加载；</li><li><code>locale/&lt;lang&gt;.json</code>：插件管理器中显示的标题与描述；</li><li><code>icon.svg</code>：应用内展示的图标。</li></ul>
+<h2>仓库结构</h2>
+<pre class="code"><code>plugins/
+├── dsh-terminal-mode/     Web UI 皮肤插件（仅浏览器）
+│   ├── package.json       bundle 清单
+│   ├── client.js          皮肤引擎、设置页、命令面板、状态栏
+│   ├── docs/              安装指南（中/英）
+│   ├── scripts/pack.ps1   可移植 zip 打包
+│   └── test/selftest.mjs  无头自测
+└── dsh-quick-provider/    模型提供商插件（Host + 浏览器）
+    ├── package.json
+    ├── index.js           模型发现、凭据存储、HTTP 路由
+    └── client.js          设置页表单
+scripts/pack-all.ps1       构建全部插件压缩包
+scripts/check-links.mjs    CI 使用的文档检查
+.github/workflows/         CI 校验与标签触发的发布</code></pre>
+<h2>新增插件</h2>
+<p>每个插件目录自成一体，CI 与发布工作流会自动发现：</p>
+<ol><li>新建 <code>plugins/&lt;name&gt;/</code>，放入 <code>package.json</code>、<code>cordis.patch.yml</code>、<code>index.js</code></li></ol>
+<p>（空的 <code>apply()</code> 即可）、可选的 <code>client.js</code>、<code>locale/en.json</code>、<code>locale/zh.json</code> 与 <code>icon.svg</code>。</p>
+<ol><li>添加 <code>scripts/pack.ps1</code>，可从 <code>dsh-terminal-mode</code> 复制。</li><li>补上 <code>README.md</code>、<code>README.zh.md</code>，并在上表增加一行。</li><li>打标签前运行 <code>powershell -ExecutionPolicy Bypass -File scripts\pack-all.ps1</code>。</li></ol>
+<h2>方向</h2>
+<p>目前有两个插件。下一步做什么，同样由日常使用中缺少什么来决定。</p>
+<ul><li>正在考虑的插件：会话导出、工作区 diff 审阅、提示词库、按会话的模型预设。</li><li>一个按 DSH 版本列出兼容构建的插件索引。</li><li>一套起始模板，让新插件从一个可用的 bundle 开始。</li><li>更多界面语言。</li><li>针对各插件所声明 DSH 版本线的 CI 覆盖。</li></ul>
+<p>欢迎 issue 与 pull request。标准不高，但不会改变：插件应当值得安装。</p>
+<h2>发布</h2>
+<p>推送 <code>v*</code> 标签后，GitHub Actions 会构建每个插件的压缩包，并把 zip 附加到该标签的 Release。 本地可用 <code>scripts/pack-all.ps1</code> 复现构建。</p>
+<h2>许可证</h2>
+<p>MIT，见 <a href="LICENSE">LICENSE</a>。第三方配色灵感在各插件的 <code>NOTICE</code> 中致谢。未复制或修改任何 Harness 代码。</p>
+<hr>
+<div align="center">
+<p><a href="README.md">English</a> | <strong>简体中文</strong> · <a href="https://github.com/rorygpk/dsh-plugins/releases">Releases</a></p>
+</div></div>
+  <div class="foot">Local preview generated from README.md and README.zh.md. Badges and plugin icons are rendered offline; external links need network.</div>
+</div>
+<script>
+function show(lang) {
+  document.getElementById('panel-en').hidden = lang !== 'en';
+  document.getElementById('panel-zh').hidden = lang !== 'zh';
+  document.getElementById('tab-en').setAttribute('aria-selected', lang === 'en');
+  document.getElementById('tab-zh').setAttribute('aria-selected', lang === 'zh');
+}
+</script>
+</body>
+</html>
