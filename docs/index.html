@@ -66,32 +66,18 @@ ul, ol { padding-left: 1.6em; }
 <table><thead><tr><th>Plugin</th><th>Purpose</th><th>Kind</th><th>Version</th><th>Documentation</th></tr></thead><tbody><tr><td><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUiPgogIDx0aXRsZSBpZD0idGl0bGUiPlRlcm1pbmFsIG1vZGU8L3RpdGxlPgogIDxyZWN0IHg9IjIiIHk9IjIiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcng9IjEzIiBmaWxsPSIjMGIwZTBjIi8+CiAgPHBhdGggZD0iTTE3IDIwIEwzMSAzMiBMMTcgNDQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzNmYjk1MCIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8cmVjdCB4PSIzNyIgeT0iMzgiIHdpZHRoPSIxMiIgaGVpZ2h0PSI3IiByeD0iMS41IiBmaWxsPSIjM2ZiOTUwIi8+Cjwvc3ZnPgo=" alt="" width="26" height="26"> <strong><a href="plugins/dsh-terminal-mode/README.md">dsh-terminal-mode</a></strong></td><td>A terminal appearance for the Web GUI: eight palettes, CRT effects, a command palette and a statusline. Presentation only, and fully reversible.</td><td><span class="pill split" style="--pill: #7ee787; color:#101418"><span class="pill-label">web-ui</span><span class="pill-msg">skin</span></span></td><td><code>1.0.2</code></td><td><a href="plugins/dsh-terminal-mode/README.md">English</a> · <a href="plugins/dsh-terminal-mode/README.zh.md">中文</a></td></tr><tr><td><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3QgeD0iNCIgeT0iNCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iMTQiIGZpbGw9IiMyNDdiYmYiLz4KICA8cGF0aCBkPSJNMzQgMTIgMjAgMzZoMTBsLTQgMTYgMTYtMjZIMzJ6IiBmaWxsPSIjZmZmZmZmIi8+Cjwvc3ZnPgo=" alt="" width="26" height="26"> <strong><a href="plugins/dsh-quick-provider/README.md">dsh-quick-provider</a></strong></td><td>Adds an OpenAI-compatible model provider from four fields and registers every model the endpoint publishes.</td><td><span class="pill split" style="--pill: #7aa2f7; color:#101418"><span class="pill-label">host</span><span class="pill-msg">+ web-ui provider</span></span></td><td><code>1.0.0</code></td><td><a href="plugins/dsh-quick-provider/README.md">English</a> · <a href="plugins/dsh-quick-provider/README.zh.md">中文</a></td></tr></tbody></table>
 <h2>dsh-terminal-mode</h2>
 <p>A skin for the Harness Web GUI. It changes appearance and nothing else: colour, type, spacing, effects. Every control can be undone, and *Restore default skin* returns the interface to its original state.</p>
-<ul><li>Eight palettes: Default, Codex Terminal, Phosphor Green, Amber CRT, Tokyo</li></ul>
-<p>Night, Nord, Solarized Light, Paper.</p>
-<ul><li>Adjustable brightness, background temperature, accent colour, corner radius,</li></ul>
-<p>scanline intensity, text glow, and a monospace toggle.</p>
-<ul><li>A command palette (<code>Ctrl/Cmd+Alt+K</code>), shortcuts for switching and restoring,</li></ul>
-<p>a statusline under the composer, and a <code>&gt;_</code> mark for empty sessions.</p>
-<ul><li>Appearance is stored in the browser's <code>localStorage</code>. The Harness profile is</li></ul>
-<p>left untouched.</p>
+<ul><li>Eight palettes: Default, Codex Terminal, Phosphor Green, Amber CRT, Tokyo Night, Nord, Solarized Light, Paper.</li><li>Adjustable brightness, background temperature, accent colour, corner radius, scanline intensity, text glow, and a monospace toggle.</li><li>A command palette (<code>Ctrl/Cmd+Alt+K</code>), shortcuts for switching and restoring, a statusline under the composer, and a <code>&gt;_</code> mark for empty sessions.</li><li>Appearance is stored in the browser's <code>localStorage</code>. The Harness profile is left untouched.</li></ul>
 <p>The implementation maps CSS custom properties on <code>&lt;html data-dsk&gt;</code> onto the application's <code>--dsw-alias-*</code> design tokens. New interface elements are rendered through published slots, so no component is replaced.</p>
 <pre class="code"><code>plugin_manager install_bundle({ target: &quot;&lt;repo&gt;/plugins/dsh-terminal-mode&quot; })</code></pre>
 <h2>dsh-quick-provider</h2>
 <p>Adds an OpenAI-compatible provider with four fields: provider id, display name, base URL and API key.</p>
-<ul><li>Queries <code>GET /models</code> and registers every model the endpoint advertises.</li><li>Stores the key through the credential seam. The provider configuration holds</li></ul>
-<p>only an environment-variable reference.</p>
-<ul><li>Available as a form under <strong>Settings > Models</strong> and as the <code>add_llm_provider</code></li></ul>
-<p>tool for sessions.</p>
+<ul><li>Queries <code>GET /models</code> and registers every model the endpoint advertises.</li><li>Stores the key through the credential seam. The provider configuration holds only an environment-variable reference.</li><li>Available as a form under <strong>Settings > Models</strong> and as the <code>add_llm_provider</code> tool for sessions.</li></ul>
 <p><code>index.js</code> performs discovery, stores the credential and writes the provider into the <code>llm-pi-ai</code> settings namespace, leaving streaming, retries and catalog resolution to the existing adapter. <code>client.js</code> renders the form.</p>
 <pre class="code"><code>plugin_manager install_bundle({ target: &quot;&lt;repo&gt;/plugins/dsh-quick-provider&quot; })</code></pre>
 <h2>Install in your DSH</h2>
 <p>DeepSeek Harness is the agent runtime these plugins extend. If it is not installed yet, install it first. Then:</p>
-<ol><li>Clone the repository.</li></ol>
-<pre class="code"><code>   git clone https://github.com/rorygpk/dsh-plugins</code></pre>
-<ol><li>In a DSH session, install the plugin directory.</li></ol>
-<pre class="code"><code>   plugin_manager install_bundle({ target: &quot;&lt;repo&gt;/plugins/dsh-terminal-mode&quot; })
-   plugin_manager install_bundle({ target: &quot;&lt;repo&gt;/plugins/dsh-quick-provider&quot; })</code></pre>
-<ol><li>Refresh the Harness window once so the client bundle loads.</li></ol>
+<ol><li>Clone the repository.<pre class="code"><code>git clone https://github.com/rorygpk/dsh-plugins</code></pre></li><li>In a DSH session, install the plugin directory.<pre class="code"><code>plugin_manager install_bundle({ target: &quot;&lt;repo&gt;/plugins/dsh-terminal-mode&quot; })
+plugin_manager install_bundle({ target: &quot;&lt;repo&gt;/plugins/dsh-quick-provider&quot; })</code></pre></li><li>Refresh the Harness window once so the client bundle loads.</li></ol>
 <table><thead><tr><th>Location</th><th>What appears</th></tr></thead><tbody><tr><td>Settings > Terminal mode</td><td>Skin cards, brightness, scanlines, palette shortcut</td></tr><tr><td>Settings > Models (lower section)</td><td>Quick provider form</td></tr><tr><td>Sidebar <code>&gt;_</code> button, or <kbd>Mod</kbd>+<kbd>Alt</kbd>+<kbd>K</kbd></td><td>Command palette</td></tr></tbody></table>
 <p>To uninstall, remove the bundle in the plugin manager, refresh the page and delete the directory. Terminal-mode preferences stay in the browser; provider entries stay in the profile until removed there.</p>
 <p>Release archives are attached to each release as well. Extract one to a permanent location and point <code>install_bundle</code> at the extracted folder.</p>
@@ -115,15 +101,10 @@ scripts/check-links.mjs    documentation check used by CI
 .github/workflows/         CI verification and tag-driven release</code></pre>
 <h2>Adding a plugin</h2>
 <p>Each plugin directory is self-contained, and CI and the release workflow discover it automatically:</p>
-<ol><li>Create <code>plugins/&lt;name&gt;/</code> with <code>package.json</code>, <code>cordis.patch.yml</code>, <code>index.js</code></li></ol>
-<p>(an inert <code>apply()</code> is enough), an optional <code>client.js</code>, <code>locale/en.json</code>, <code>locale/zh.json</code> and an <code>icon.svg</code>.</p>
-<ol><li>Add a <code>scripts/pack.ps1</code>, copied from <code>dsh-terminal-mode</code>.</li><li>Add <code>README.md</code>, <code>README.zh.md</code>, and a row to the table above.</li><li>Run <code>powershell -ExecutionPolicy Bypass -File scripts\pack-all.ps1</code> before</li></ol>
-<p>tagging.</p>
+<ol><li>Create <code>plugins/&lt;name&gt;/</code> with <code>package.json</code>, <code>cordis.patch.yml</code>, <code>index.js</code> (an inert <code>apply()</code> is enough), an optional <code>client.js</code>, <code>locale/en.json</code>, <code>locale/zh.json</code> and an <code>icon.svg</code>.</li><li>Add a <code>scripts/pack.ps1</code>, copied from <code>dsh-terminal-mode</code>.</li><li>Add <code>README.md</code>, <code>README.zh.md</code>, and a row to the table above.</li><li>Run <code>powershell -ExecutionPolicy Bypass -File scripts\pack-all.ps1</code> before tagging.</li></ol>
 <h2>Direction</h2>
 <p>Two plugins exist today. What comes next will be decided the same way: by what is missing in daily use.</p>
-<ul><li>Further plugins under consideration: session export, workspace diff review, a</li></ul>
-<p>prompt library, per-session model presets.</p>
-<ul><li>A plugin index listing compatible builds for each DSH release.</li><li>A starter template, so a new plugin begins from a working bundle.</li><li>Additional interface languages.</li><li>CI coverage against the DSH release line each plugin declares.</li></ul>
+<ul><li>Further plugins under consideration: session export, workspace diff review, a prompt library, per-session model presets.</li><li>A plugin index listing compatible builds for each DSH release.</li><li>A starter template, so a new plugin begins from a working bundle.</li><li>Additional interface languages.</li><li>CI coverage against the DSH release line each plugin declares.</li></ul>
 <p>Issues and pull requests are welcome. The standard is modest and stays fixed: a plugin should be worth installing.</p>
 <h2>Releases</h2>
 <p>Pushing a <code>v*</code> tag builds every plugin archive on GitHub Actions and attaches each zip to that tag's release. Local builds are reproducible with <code>scripts/pack-all.ps1</code>.</p>
@@ -162,12 +143,8 @@ scripts/check-links.mjs    documentation check used by CI
 <pre class="code"><code>plugin_manager install_bundle({ target: &quot;&lt;仓库路径&gt;/plugins/dsh-quick-provider&quot; })</code></pre>
 <h2>安装到你的 DSH</h2>
 <p>DeepSeek Harness 是这些插件所扩展的 Agent 运行时。如果尚未安装，请先安装，然后：</p>
-<ol><li>克隆仓库。</li></ol>
-<pre class="code"><code>   git clone https://github.com/rorygpk/dsh-plugins</code></pre>
-<ol><li>在 DSH 会话中安装插件目录。</li></ol>
-<pre class="code"><code>   plugin_manager install_bundle({ target: &quot;&lt;仓库路径&gt;/plugins/dsh-terminal-mode&quot; })
-   plugin_manager install_bundle({ target: &quot;&lt;仓库路径&gt;/plugins/dsh-quick-provider&quot; })</code></pre>
-<ol><li>刷新一次 Harness 窗口，让客户端 bundle 生效。</li></ol>
+<ol><li>克隆仓库。<pre class="code"><code>git clone https://github.com/rorygpk/dsh-plugins</code></pre></li><li>在 DSH 会话中安装插件目录。<pre class="code"><code>plugin_manager install_bundle({ target: &quot;&lt;仓库路径&gt;/plugins/dsh-terminal-mode&quot; })
+plugin_manager install_bundle({ target: &quot;&lt;仓库路径&gt;/plugins/dsh-quick-provider&quot; })</code></pre></li><li>刷新一次 Harness 窗口，让客户端 bundle 生效。</li></ol>
 <table><thead><tr><th>位置</th><th>内容</th></tr></thead><tbody><tr><td>设置 > 终端模式</td><td>皮肤卡片、亮度、扫描线、命令面板快捷键</td></tr><tr><td>设置 > 模型（页面上部下方）</td><td>快速添加提供商表单</td></tr><tr><td>侧边栏 <code>&gt;_</code> 按钮，或 <kbd>Mod</kbd>+<kbd>Alt</kbd>+<kbd>K</kbd></td><td>命令面板</td></tr></tbody></table>
 <p>卸载时，在插件管理器中移除 bundle，刷新页面并删除目录。终端模式的外观偏好仍留在浏览器中； 提供商条目会保留在 profile 里，直到手动移除。</p>
 <p>每个插件也会以独立 zip 附在对应的 Release 上。解压到固定位置后，把 <code>install_bundle</code> 指向解压目录即可。</p>
@@ -191,9 +168,7 @@ scripts/check-links.mjs    CI 使用的文档检查
 .github/workflows/         CI 校验与标签触发的发布</code></pre>
 <h2>新增插件</h2>
 <p>每个插件目录自成一体，CI 与发布工作流会自动发现：</p>
-<ol><li>新建 <code>plugins/&lt;name&gt;/</code>，放入 <code>package.json</code>、<code>cordis.patch.yml</code>、<code>index.js</code></li></ol>
-<p>（空的 <code>apply()</code> 即可）、可选的 <code>client.js</code>、<code>locale/en.json</code>、<code>locale/zh.json</code> 与 <code>icon.svg</code>。</p>
-<ol><li>添加 <code>scripts/pack.ps1</code>，可从 <code>dsh-terminal-mode</code> 复制。</li><li>补上 <code>README.md</code>、<code>README.zh.md</code>，并在上表增加一行。</li><li>打标签前运行 <code>powershell -ExecutionPolicy Bypass -File scripts\pack-all.ps1</code>。</li></ol>
+<ol><li>新建 <code>plugins/&lt;name&gt;/</code>，放入 <code>package.json</code>、<code>cordis.patch.yml</code>、<code>index.js</code> （空的 <code>apply()</code> 即可）、可选的 <code>client.js</code>、<code>locale/en.json</code>、<code>locale/zh.json</code> 与 <code>icon.svg</code>。</li><li>添加 <code>scripts/pack.ps1</code>，可从 <code>dsh-terminal-mode</code> 复制。</li><li>补上 <code>README.md</code>、<code>README.zh.md</code>，并在上表增加一行。</li><li>打标签前运行 <code>powershell -ExecutionPolicy Bypass -File scripts\pack-all.ps1</code>。</li></ol>
 <h2>方向</h2>
 <p>目前有两个插件。下一步做什么，同样由日常使用中缺少什么来决定。</p>
 <ul><li>正在考虑的插件：会话导出、工作区 diff 审阅、提示词库、按会话的模型预设。</li><li>一个按 DSH 版本列出兼容构建的插件索引。</li><li>一套起始模板，让新插件从一个可用的 bundle 开始。</li><li>更多界面语言。</li><li>针对各插件所声明 DSH 版本线的 CI 覆盖。</li></ul>
