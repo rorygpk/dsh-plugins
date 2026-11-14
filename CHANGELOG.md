@@ -19,3 +19,8 @@ Repository-level changes. Per-plugin history lives in each plugin's own
 - `dsh-terminal-mode` moved to `plugins/dsh-terminal-mode` (version 1.0.2).
 - CI and release workflows now discover plugins from `plugins/*` instead of
   hard-coding one package.
+- Root READMEs gained a "How to install in your DSH" walkthrough with a short
+  DeepSeek Harness introduction, where-to-look table, and uninstall notes.
+- Root READMEs now introduce both plugins in detail (highlights and how each one
+  hooks into DSH) and publish a forward-looking roadmap for the plugin
+  ecosystem.
