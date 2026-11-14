@@ -24,3 +24,5 @@ Repository-level changes. Per-plugin history lives in each plugin's own
 - Root READMEs now introduce both plugins in detail (highlights and how each one
   hooks into DSH) and publish a forward-looking roadmap for the plugin
   ecosystem.
+- Root READMEs rewritten in a plainer editorial voice: shorter claims, no
+  marketing filler, same facts.
