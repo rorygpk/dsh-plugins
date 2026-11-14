@@ -77,11 +77,11 @@ files abort the build; missing optional docs only warn. Install it as in A.
 ### D. From GitHub
 
 ```bash
-git clone https://github.com/rorygpk/dsh-terminal-mode
+git clone https://github.com/rorygpk/dsh-plugins
 ```
 
 Install the cloned folder by absolute path exactly as in B. Prebuilt archives are on the
-[Releases](https://github.com/rorygpk/dsh-terminal-mode/releases) page: pushing a `v*` tag
+[Releases](https://github.com/rorygpk/dsh-plugins/releases) page: pushing a `v*` tag
 builds the zip on GitHub Actions and attaches it to the release.
 
 ## Use
@@ -167,7 +167,7 @@ The package is plain files: copy the folder to any machine and install it with
 replace the files with a new version, rerun `install_bundle` and refresh the Harness
 window once so the new client bundle is loaded.
 
-Published at <https://github.com/rorygpk/dsh-terminal-mode> (MIT). The repository keeps
+Published at <https://github.com/rorygpk/dsh-plugins> (MIT). The repository keeps
 the source, the install guides, the headless self-test and a release workflow: pushing a
 `v*` tag builds `dist/dsh-terminal-mode-<version>.zip` on GitHub Actions and attaches it
 to the release, so the published archive is reproducible from source with

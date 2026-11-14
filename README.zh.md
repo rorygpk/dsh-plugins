@@ -67,11 +67,11 @@ powershell -ExecutionPolicy Bypass -File scripts\pack.ps1
 ### 方式四：从 GitHub 获取
 
 ```bash
-git clone https://github.com/rorygpk/dsh-terminal-mode
+git clone https://github.com/rorygpk/dsh-plugins
 ```
 
 按方式二用克隆目录的绝对路径安装即可。预构建的压缩包在
-[Releases](https://github.com/rorygpk/dsh-terminal-mode/releases) 页面：推送 `v*` 标签后由
+[Releases](https://github.com/rorygpk/dsh-plugins/releases) 页面：推送 `v*` 标签后由
 GitHub Actions 自动构建 zip 并附加到 Release。
 
 ## 使用
@@ -153,7 +153,7 @@ GitHub Actions 自动构建 zip 并附加到 Release。
 
 本包只是一组文件：把文件夹复制到任意机器，用 `install_bundle` 安装即可；目标机器上不需要构建、安装或下载任何东西。运行时文件为 `package.json`、`cordis.patch.yml`、`index.js`、`client.js`、`locale/en.json`、`locale/zh.json`、`icon.svg`。用新版本替换文件后，请重新执行 `install_bundle` 并刷新一次 Harness 窗口，以加载新的客户端 bundle。
 
-源码发布在 <https://github.com/rorygpk/dsh-terminal-mode>（MIT）。仓库包含源码、安装文档、无头自测与发布工作流：推送 `v*` 标签会由 GitHub Actions 构建 `dist/dsh-terminal-mode-<version>.zip` 并附加到 Release，因此发布包可用 `scripts/pack.ps1` 从源码复现。
+源码发布在 <https://github.com/rorygpk/dsh-plugins>（MIT）。仓库包含源码、安装文档、无头自测与发布工作流：推送 `v*` 标签会由 GitHub Actions 构建 `dist/dsh-terminal-mode-<version>.zip` 并附加到 Release，因此发布包可用 `scripts/pack.ps1` 从源码复现。
 
 由于 `private` 为 `true`，npm 不会发布该包。通过文件夹或压缩包分发是刻意设计。
 

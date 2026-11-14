@@ -8,7 +8,7 @@ and this project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
 ### Added
 
-- Published source and releases at <https://github.com/rorygpk/dsh-terminal-mode>.
+- Published source and releases at <https://github.com/rorygpk/dsh-plugins>.
 - README install guide gained a GitHub clone path; tag pushes build the portable
   archive on GitHub Actions and attach it to the release.
 
