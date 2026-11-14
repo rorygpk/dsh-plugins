@@ -1,0 +1,27 @@
+{
+  "name": "@local/dsh-quick-provider",
+  "version": "1.0.0",
+  "description": "Add a third-party OpenAI-compatible model provider with just an id, name, URL and API key.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rorygpk/dsh-plugins.git"
+  },
+  "homepage": "https://github.com/rorygpk/dsh-plugins#readme",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": ["index.js", "client.js", "cordis.patch.yml", "locale/*.json", "icon.svg"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-settings-models"]
+    }
+  }
+}

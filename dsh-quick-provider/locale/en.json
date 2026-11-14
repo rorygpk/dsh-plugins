@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Quick provider",
+    "description": "Add a third-party OpenAI-compatible model provider with just an id, name, URL and API key; it discovers and registers every advertised model automatically."
+  }
+}

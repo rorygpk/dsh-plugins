@@ -1,0 +1,3 @@
+- insert:
+    - id: dsh-quick-provider
+      name: '@local/dsh-quick-provider'
