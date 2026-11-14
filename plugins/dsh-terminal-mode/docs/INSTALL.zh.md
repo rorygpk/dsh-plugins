@@ -17,18 +17,18 @@ DSH 会链接该安装路径。之后若移动或重命名文件夹，请用新�
 
 ### 使用发布压缩包
 
-1. 下载 `dsh-terminal-mode-1.0.1.zip`。
+1. 下载 `dsh-terminal-mode-1.0.2.zip`。
 2. 解压。压缩包内是顶层 `dsh-terminal-mode/` 文件夹。
 3. 确认 `dsh-terminal-mode\package.json` 位于文件夹根部。
 
 如需校验，可与发布页公布的 SHA-256 比对：
 
 ```powershell
-Get-FileHash .\dsh-terminal-mode-1.0.1.zip -Algorithm SHA256
+Get-FileHash .\dsh-terminal-mode-1.0.2.zip -Algorithm SHA256
 ```
 
 ```bash
-shasum -a 256 dsh-terminal-mode-1.0.1.zip
+shasum -a 256 dsh-terminal-mode-1.0.2.zip
 ```
 
 ### 从源码文件夹或网络共享复制
@@ -95,7 +95,7 @@ plugin_manager install_bundle({ target: "C:/Tools/dsh-terminal-mode" })
 2. 用 `plugin_manager` 移除该 bundle，然后刷新页面。
 3. 删除文件夹。可选：清除该来源下的 `dsh.terminal-mode.v1` 这个 `localStorage` 键。
 
-回滚：用上一版发布文件替换文件夹，再次执行 `install_bundle`。1.0.1 无需迁移步骤。
+回滚：用上一版发布文件替换文件夹，再次执行 `install_bundle`。1.0.2 无需迁移步骤。
 
 ## 8. 在开发机上生成压缩包
 

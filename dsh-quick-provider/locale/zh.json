@@ -1,6 +1,0 @@
-{
-  "meta": {
-    "title": "快速添加模型提供商",
-    "description": "只需输入提供商 ID、显示名、URL 和 API Key，即可自动发现并注册该第三方 OpenAI 兼容平台的全部模型。"
-  }
-}

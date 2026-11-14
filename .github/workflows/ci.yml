@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  selftest:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - name: Check out
@@ -18,12 +18,27 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Syntax check
-        run: node --check index.js && node --check client.js
-
-      - name: Headless self-test
-        run: node test/selftest.mjs
-
-      - name: Validate JSON manifests
+      - name: Verify every plugin
         run: |
-          node -e "for (const f of ['package.json','locale/en.json','locale/zh.json']) JSON.parse(require('fs').readFileSync(f,'utf8')); console.log('json ok')"
+          set -euo pipefail
+          for dir in plugins/*/; do
+            name=$(basename "$dir")
+            echo "::group::$name"
+            node -e "JSON.parse(require('fs').readFileSync('$dir/package.json','utf8')); console.log('package.json ok')"
+            for js in "$dir"*.js; do
+              [ -e "$js" ] || continue
+              node --check "$js"
+              echo "syntax ok: $js"
+            done
+            for loc in "$dir"locale/*.json; do
+              [ -e "$loc" ] || continue
+              node -e "JSON.parse(require('fs').readFileSync('$loc','utf8')); console.log('$loc ok')"
+            done
+            if [ -f "$dir/test/selftest.mjs" ]; then
+              node "$dir/test/selftest.mjs"
+            fi
+            echo "::endgroup::"
+          done
+
+      - name: Check documentation links
+        run: node scripts/check-links.mjs
